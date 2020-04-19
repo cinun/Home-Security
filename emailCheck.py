@@ -6,10 +6,16 @@ loginID = randint(999,9999)
 
 
 def startMail():
-    sender_email = "windowsunlock7@gmail.com"
-    rec_email = "yathartha.regmi@ttu.edu"
+    '''
+    Sender Email needs to be a Gmail address because we are using Google's SMTP
+    Create a dummy gmail account for sender_email because this will be the account we use for sending our security code. 
+    '''
     
-    login  = "hardyman96"
+    
+    sender_email = "yourEmail@gmail.com" 
+    rec_email = "receiverEmail@ttu.edu"
+    
+    login  = "password for sender_email"
     message = ("Wassup my guy your login code is {}".format(loginID))
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
